@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+	<h1>D3.js</h1>
+
+	<p>This is paragraph</p>
+
+	<script>
+		d3.select("h1").style("color", "green");
+
+		var canvas= d3.select("p")
+			.append("svg")
+			.attr("width", 500)
+			.attr("height", 500)
+
+		var circle = canvas.append("circle")
+			.attr("cx", 250)
+			.attr("cy", 250)
+			.attr("r", 50)
+			.attr("fill", "red")
+
+		var rect = canvas.append("rect")
+			.attr("width", 100)
+			.attr("height", 50)
+
+		var line = canvas.append("line")
+			.attr("x1", 0)
+			.attr("y1", 100)
+			.attr("x2", 400)
+			.attr("y2", 400)
+			.attr("stroke", "green")
+			.attr("stroke-width", 10)
+
+		d3.select("body")
+			.append("p")
+			.style("color", "red")
+			.text("Hi, what's up?")
+
+		console.log(d3);
+	</script>
+
+</body>
